@@ -2,7 +2,6 @@ function filter(data, pattern) {
   if (!data || data.length === 0) {
     return 'Invalid data: One or more countries are empty or improperly formatted.';
   }
-  console.log(data.data);
   const filteredData = data.data
     .map(country => ({
       name: country.name,
