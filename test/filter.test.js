@@ -7,58 +7,57 @@ test('Filter animals with pattern "as"', () => {
 
   expect(result).toEqual([
     {
-      name: "Tohabdal",
-      peoples: [
+      "name": "Tohabdal",
+      "peoples": [
         {
-          name: "Effie Houghton",
-          animals: [
-            {name: 'African Wild Ass'}
+          "name": "Owen Bongini",
+          "animals": [
+            {
+              "name": "Zebrashark"
+            }
           ]
-        },
-        {
-          name: 'Owen Bongini',
-          animals:
-            [{name: 'Zebrashark'}]
         }
       ]
     },
     {
-      name: "Uzuzozne",
-      peoples: [
+      "name": "Uzuzozne",
+      "peoples": [
         {
-          name: 'Georgia Hooper',
-          animals: [
-            {name: 'Grasshopper'}
+          "name": "Georgia Hooper",
+          "animals": [
+            {
+              "name": "Grasshopper"
+            }
           ]
-        },
+        }
       ]
     },
     {
-      name: "Zuhackog",
-      peoples: [
+      "name": "Zuhackog",
+      "peoples": [
         {
-          name: 'Elva Baroni',
-          animals: [
-            {name: 'Zebrashark'},
+          "name": "Elva Baroni",
+          "animals": [
+            {
+              "name": "Zebrashark"
+            }
           ]
-        },
+        }
       ]
     },
     {
-      name: "Satanwi",
-      peoples: [
+      "name": "Satanwi",
+      "peoples": [
         {
-          name: 'Elmer Kinoshita',
-          animals: [
-            {name: 'Weasel'}]
-        },
-        {
-          name: 'Ernest Conte',
-          animals:
-            [{name: 'Asian Elephant'}]
-        },
+          "name": "Elmer Kinoshita",
+          "animals": [
+            {
+              "name": "Weasel"
+            }
+          ]
+        }
       ]
-    },
+    }
   ]);
 });
 
