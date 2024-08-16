@@ -8,7 +8,7 @@ function filter(data, pattern) {
       peoples: country.people.map(p => ({
         name: p.name,
         animals: p.animals.filter(animal =>
-          animal.name.toLowerCase().includes(pattern.toLowerCase())
+          animal.name.includes(pattern.toLowerCase())
         )
       })).filter(people => people.animals.length > 0)
     }))
