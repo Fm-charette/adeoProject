@@ -1,21 +1,17 @@
 function count(data) {
   if (!data || data.length === 0) {
-    return 'Invalid data: please provide a valid data file';
+    throw new Error('Invalid data: please provide a valid data file');
   }
   const dataCounter = data.data.map(country => {
-    if (country.people.length === 0) {
-      return ('No people in the country');
-    }
-    const countPeoples = country.people.length;
+    if (country.people.length === 0)
+      throw new Error('No people in the country');
     return {
-      name: `${country.name} [${countPeoples}]`,
+      name: `${country.name} [${country.people.length}]`,
       people: country.people.map(p => {
-        if (p.animals.length === 0) {
-          return ('No animals');
-        }
-        const countAnimals = p.animals.length;
+        if (p.animals.length === 0)
+          throw new Error('No animals');
         return {
-          name: `${p.name} [${countAnimals}]`,
+          name: `${p.name} [${p.animals.length}]`,
           animals: p.animals
         }
       })

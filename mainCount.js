@@ -3,6 +3,9 @@
 const data = require('./data');
 const count = require('./count');
 
-const result = count(data);
-
-console.log(JSON.stringify(result, null, 2));
+try {
+  const result = count(data);
+  console.log(JSON.stringify(result, null, 2));
+} catch (err) {
+  console.error('An error has occured:', err.message);
+}

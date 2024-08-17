@@ -3,8 +3,10 @@ const dataFile = require('../data');
 
 test('Return error message if no data', () => {
   const dataTest = [];
-  const result = count(dataTest);
-  expect(result).toEqual('Invalid data: please provide a valid data file');
+  const t = () => {
+    count(dataTest);
+  };
+  expect(t).toThrow("Invalid data: please provide a valid data file");
 });
 
 test('count animals and people', () => {
@@ -860,3 +862,25 @@ test('count animals and people', () => {
     }
   ])
 })
+
+test('Verify dataType is array', () => {
+  const t = () => {
+    count(dataFile);
+  };
+  expect(t).toThrow("Invalid data: please provide a valid data file");
+});
+
+test('Error if no people in country', () => {
+  const t = () => {
+    count(dataFile);
+  };
+  expect(t).toThrow("No people in the country");
+});
+
+test('Error if no animals', () => {
+  const t = () => {
+    count(dataFile);
+  };
+  expect(t).toThrow("No animals");
+})
+
