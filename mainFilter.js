@@ -10,6 +10,9 @@ if (!pattern) {
   process.exit(1);
 }
 
-const result = filter(data, pattern);
-
-console.log(JSON.stringify(result, null, 2));
+try {
+  const result = filter(data, pattern);
+  console.log(JSON.stringify(result, null, 2));
+} catch (err) {
+  console.error('An error has occured:', err.message);
+}

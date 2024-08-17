@@ -10,6 +10,14 @@ test('Filter animals with pattern "as"', () => {
       "name": "Tohabdal",
       "peoples": [
         {
+          "name": "Effie Houghton",
+          "animals": [
+            {
+              "name": "African Wild Ass"
+            }
+          ]
+        },
+        {
           "name": "Owen Bongini",
           "animals": [
             {
@@ -55,6 +63,14 @@ test('Filter animals with pattern "as"', () => {
               "name": "Weasel"
             }
           ]
+        },
+        {
+          "name": "Ernest Conte",
+          "animals": [
+            {
+              "name": "Asian Elephant"
+            }
+          ]
         }
       ]
     }
@@ -64,14 +80,25 @@ test('Filter animals with pattern "as"', () => {
 test('error message if no data', () => {
   const pattern = 'xyz';
   const dataTest = [];
-  const result = filter(dataTest, pattern);
 
-  expect(result).toEqual('Invalid data: One or more countries are empty or improperly formatted.');
+  const t = () => {
+    filter(dataTest, pattern);
+  };
+  expect(t).toThrow("Invalid data: One or more countries are empty or improperly formatted.");
 });
 
 test('error message if pattern return no result', () => {
   const pattern = 'xyz';
-  const result = filter(dataFile, pattern);
+  const t = () => {
+    filter(dataFile, pattern);
+  };
+  expect(t).toThrow("No matching data found for the given pattern");
+});
 
-  expect(result).toEqual('No matching data found for the given pattern');
+test('Verify dataType is array', () => {
+  const pattern = 'xyz';
+  const t = () => {
+    filter('toto', pattern);
+  };
+  expect(t).toThrow("Invalid data: One or more countries are empty or improperly formatted.");
 });
