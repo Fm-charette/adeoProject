@@ -1,42 +1,43 @@
 # AdeoProject
 
-This is my repository for the test project of adeo
+This is my repository for the test project of Adeo.
 
 ## Installation
 
-Use the node package manager to install the testing library,
-write the command line in your terminal :
-
+Use the Node Package Manager to install the testing library by running the following command in your terminal:
 ```bash
-npm i
+npm install
 ```
-It will install the jest package
+This will install the Jest package
 
 ## Filter
-To use the filter function write the command in your terminal
+To use the filter function, run the following command in your terminal:
+
 ```
 node mainFilter.js "args"
 ```
-the args correspond to the pattern used in the function exemple: ra or RA
+The args correspond to the pattern used in the function (example: ra or RA).
 
 ## Count
-To use the count function write the command in your terminal
+
+To use the count function, run the following command in your terminal:
+
 ```
 node mainCount.js
 ```
-This will execute the function and print the result
-
 ## Testing
 
-To test both of the file filter.js and count.js go to the test directory
+To test both filter.js and count.js, navigate to the test directory:
 ```
 cd test
 ```
-Then write the command 
+Then run the following command:
+
 ```
 npm run test
 ```
-If you want to see the test result of one file, write this command in your termminal
+If you want to see the test results of a specific file, use this command in your terminal:
+
 ```
 npm test -- "nameOfTheFile.js"
 ```
